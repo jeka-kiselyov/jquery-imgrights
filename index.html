@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Jquery-imgrights by jeka-kiselyov</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/jeka-kiselyov/jquery-imgrights">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/jeka-kiselyov/jquery-imgrights/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/jeka-kiselyov/jquery-imgrights/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Jquery-imgrights</h1>
+          <p></p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/jeka-kiselyov">jeka-kiselyov</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>jQuery IMGRights Plugin</h1>
+
+<p>A simple jQuery plugin for displaying image copyrights tooltip on IMG tag after
+mouseover event. Can get copyright data from both data-* attributes and hmedia 
+microformat definition.</p>
+
+<h2>Installation</h2>
+
+<p>Include script after the jQuery:</p>
+
+<pre><code>&lt;script src="/path/to/jquery.imgrights.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h2>Initialization</h2>
+
+<p>Common method is to apply imgrights to all supported elements on the page:</p>
+
+<div class="highlight"><pre>  <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span> 
+      <span class="nx">$</span><span class="p">(</span><span class="s1">'img, .hmedia'</span><span class="p">).</span><span class="nx">imgrights</span><span class="p">();</span> 
+  <span class="p">});</span>
+</pre></div>
+
+<p>Custom copyright string format:</p>
+
+<div class="highlight"><pre>  <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span> 
+      <span class="nx">$</span><span class="p">(</span><span class="s1">'img, .hmedia'</span><span class="p">).</span><span class="nx">imgrights</span><span class="p">({</span><span class="nx">format</span><span class="o">:</span> <span class="s2">"&amp;copy; &lt;a href='%copyright_url%'&gt;%copyright%&lt;/a&gt;"</span><span class="p">});</span> 
+  <span class="p">});</span>
+</pre></div>
+
+<h2>Copyright data</h2>
+
+<h3>data-*</h3>
+
+<p>Copyright information can be stored in IMG tag attributes.</p>
+
+<div class="highlight"><pre><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"uploads/images/d.jpg"</span> <span class="na">data-copyright=</span><span class="s">"ZOOM-ZOOM studio"</span> <span class="na">data-copyright-url=</span><span class="s">"http://vk.com/club30994140"</span><span class="nt">&gt;</span>
+</pre></div>
+
+<p>Will generate tooltip with copyright owner name ZOOM-ZOOM studio, linked to <a href="http://vk.com/club30994140">http://vk.com/club30994140</a>.</p>
+
+<h3>hmedia microformat</h3>
+
+<ul>
+<li>.hmedia &gt; img.photo - image element</li>
+<li>.hmedia &gt; .contributor &gt; .fn - author name</li>
+<li>.hmedia &gt; .contributor &gt; .url - author URL (href attr)</li>
+</ul><p>hmedia classic example</p>
+
+<div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hmedia"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">rel=</span><span class="s">"enclosure"</span> <span class="na">type=</span><span class="s">"image/jpeg"</span> <span class="na">href=</span><span class="s">"http://www.treeswing.net/index.php?showimage=355"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"photo"</span> <span class="na">alt=</span><span class="s">"Saturday Nights alright for fighting, by treeswing"</span> 
+     <span class="na">src=</span><span class="s">"http://cache1.photoblogs.org/thumbnail/?hash=9bece0678c5610bd4b631d9037286df7&amp;size=450"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"fn"</span><span class="nt">&gt;</span>Saturday Night's Alright For Fighting<span class="nt">&lt;/span&gt;</span>, 
+    <span class="nt">&lt;em&gt;</span>by <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"contributor vcard"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"url fn"</span> <span class="na">href=</span><span class="s">"http://www.treeswing.net/"</span><span class="nt">&gt;</span>Treeswing<span class="nt">&lt;/a&gt;</span> 
+      (<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"url"</span> <span class="na">href=</span><span class="s">"http://www.photoblogs.org/profile/treeswing.net/"</span><span class="nt">&gt;</span>profile<span class="nt">&lt;/a&gt;</span>)
+    <span class="nt">&lt;/span&gt;&lt;/em&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>Will generate tooltip with copyright owner name Treeswing, linked to <a href="http://www.treeswing.net/">http://www.treeswing.net/</a>. </p>
+
+<h2>Authors</h2>
+
+<p><a href="https://github.com/jeka-kiselyov">Jeka Kiselyov</a></p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
