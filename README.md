@@ -19,7 +19,7 @@ Common method is to apply imgrights to all supported elements on the page:
   });
 ```
 
-Custom:
+Custom copyright string format:
 ```javascript
   $(function(){ 
       $('img, .hmedia').imgrights({format: "&copy; <a href='%copyright_url%'>%copyright%</a>"}); 
