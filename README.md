@@ -2,7 +2,7 @@
 
 A simple jQuery plugin for displaying image copyrights tooltip on IMG tag after
 mouseover event. Can get copyright data from both data-* attributes and hmedia 
-microformat definition.
+microformat definition. Demo - http://jeka-kiselyov.github.com/jquery-imgrights/
 
 ## Installation
 
@@ -56,7 +56,7 @@ hmedia classic example
     </span></em>
 </div>
 ```
-Will generate tooltip with copyright owner name Treeswing, linked to http://www.treeswing.net/. 
+Will generate tooltip with copyright owner name Treeswing, linked to treeswing.net. 
 
 ## Authors
 

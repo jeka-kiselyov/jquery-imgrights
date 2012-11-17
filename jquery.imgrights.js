@@ -1,6 +1,6 @@
 /*!
  * jQuery IMGRights Plugin v1.0
- * https://github.com/jeka-kiselyov/jquery-imgrights
+ * http://jeka-kiselyov.github.com/jquery-imgrights/
  *
  * Copyright 2012, Jeka Kiselyov
  * Dual licensed under the MIT or GPL Version 2 licenses.
