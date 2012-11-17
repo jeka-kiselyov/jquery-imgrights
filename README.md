@@ -32,7 +32,9 @@ Will generate tooltip with copyright owner name ZOOM-ZOOM studio, linked to http
 ### hmedia
 
 .hmedia > img.photo - image element
+
 .hmedia > .contributor > .fn - author name
+
 .hmedia > .contributor > .url - author URL (href attr)
 
 hmedia classic example
@@ -51,6 +53,9 @@ hmedia classic example
 ```
 Will generate tooltip with copyright owner name Treeswing, linked to http://www.treeswing.net/. 
 
+## Authors
+
+[Jeka Kiselyov](https://github.com/jeka-kiselyov)
 
 
 
