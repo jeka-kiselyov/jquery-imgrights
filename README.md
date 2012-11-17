@@ -36,7 +36,7 @@ Copyright information can be stored in IMG tag attributes.
 ```
 Will generate tooltip with copyright owner name ZOOM-ZOOM studio, linked to http://vk.com/club30994140.
 
-### hmedia
+### hmedia microformat 
 
  - .hmedia > img.photo - image element
  - .hmedia > .contributor > .fn - author name
