@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>jQuery IMGRights demo</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="jquery.imgrights.min.js"></script>
+	<script>
+	   $(function(){
+         $('img, .hmedia').imgrights();           
+     });
+	</script>
+	<style>
+	  body {
+      color: black;
+      background-color: white;
+      padding: 0;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+    }
+	  #imgrights_popup_div a {
+      color: #000055;
+      text-decoration: none;
+    }           
+	  #imgrights_popup_div a:hover {
+      text-decoration: underline;
+    }
+	</style>
+</head>
+<body>
+
+<h2>jQuery IMGRights plugin demo page</h2>
+
+<p><a href="https://github.com/jeka-kiselyov/jquery-imgrights">jQuery IMGRights plugin</a></p>
+
+<h3>data-*</h3>
+
+<img src="http://farm4.staticflickr.com/3109/2918567169_86112c79b2_o.jpg" width="768" height="533" data-copyright="Musee McCord Museum" data-copyright-url="http://www.flickr.com/people/25786829@N08/">
+
+<h3>data-copyright only</h3>
+
+<img src="http://farm6.staticflickr.com/5168/5324105312_8b178b143a_b.jpg" width="756" height="578" data-copyright="Musee McCord Museum">
+
+
+<h3>hmedia microformat</h3>
+
+<div class="hmedia">
+    <img class="photo" alt="Railway trestle over Codroy River, NF, about 1900" 
+     src="http://farm6.staticflickr.com/5207/5323499775_538bc0043d_b.jpg"/>
+  <div style="display: none;">
+    <span class="fn">Railway trestle over Codroy River, NF, about 1900</span>, 
+    <em>by <span class="contributor vcard">
+       <a class="url fn" href="http://www.flickr.com/people/25786829@N08/">Musee McCord Museum</a> 
+    </span></em>
+  </div>
+</div>
+
+</body>
+</html>
