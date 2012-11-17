@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="javascripts/respond.js"></script>
+    <script src="javascripts/jquery.imgrights.min.js"></script>
+    <script>	
+        $(function(){ $('img, .hmedia').imgrights(); })
+    </script>     
+    <style>
+	  #imgrights_popup_div a {
+      color: #000055;
+      text-decoration: none;
+    }           
+	  #imgrights_popup_div a:hover {
+      text-decoration: underline;
+    }
+    </style>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -15,7 +28,6 @@
     <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
   </head>
   <body>
       <div id="header">
@@ -23,7 +35,7 @@
           <li class="fork"><a href="https://github.com/jeka-kiselyov/jquery-imgrights">View On GitHub</a></li>
           <li class="downloads"><a href="https://github.com/jeka-kiselyov/jquery-imgrights/zipball/master">ZIP</a></li>
           <li class="downloads"><a href="https://github.com/jeka-kiselyov/jquery-imgrights/tarball/master">TAR</a></li>
-          <li class="title">DOWNS</li>
+          <li class="title">DOWNLOADS</li>
         </nav>
       </div><!-- end header -->
 
@@ -43,6 +55,11 @@
 <p>A simple jQuery plugin for displaying image copyrights tooltip on IMG tag after
 mouseover event. Can get copyright data from both data-* attributes and hmedia 
 microformat definition.</p>
+
+<h2>Demo</h2>
+
+<p><img src="http://farm4.staticflickr.com/3109/2918567169_86112c79b2_o.jpg" width="650" data-copyright="Musee McCord Museum" data-copyright-url="http://www.flickr.com/people/25786829@N08/">
+</p>
 
 <h2>Installation</h2>
 
@@ -99,7 +116,7 @@ microformat definition.</p>
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
 
-<p>Will generate tooltip with copyright owner name Treeswing, linked to <a href="http://www.treeswing.net/">http://www.treeswing.net/</a>. </p>
+<p>Will generate tooltip with copyright owner name Treeswing, linked to treeswing.net. </p>
 
 <h2>Authors</h2>
 
